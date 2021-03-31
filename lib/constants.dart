@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 const bottomContainerHeight = 80.0;
-const bottomContainerColor = Color(0xFFEB1555);
+const bottomContainerColor = Color(0xFF7312BD);
 const ttactiveCardColor = Color(0xFFEB1555);
 const activeCardColor = Color(0xFF1D1E33);
 const inactiveCardColor = Color(0xFF111328);
 const kButtonColor = Color(0xFF4c4f5e);
+const KthumbColor = Color(0xFF7312BD);
+const kscaffoldBackgroundColor = Color(0xFF0A0E21);
 
 const labelTextStyle = TextStyle(
   fontSize: 18.0,

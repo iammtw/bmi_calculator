@@ -69,9 +69,12 @@ class _InputPageState extends State<InputPage> {
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'HEIGHT',
-                    style: labelTextStyle,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text(
+                      'HEIGHT',
+                      style: labelTextStyle,
+                    ),
                   ),
                   SizedBox(
                     height: 10,
@@ -82,14 +85,17 @@ class _InputPageState extends State<InputPage> {
                     textBaseline: TextBaseline.alphabetic,
                     children: [
                       Text(height.toString(), style: kNumberTextStyle),
+                      SizedBox(
+                        width: 5,
+                      ),
                       Text("cm", style: labelTextStyle),
                     ],
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
                       inactiveTrackColor: Color(0xFF8D8E98),
-                      thumbColor: Color(0xFFEB1555),
-                      overlayColor: Color(0x29EB1555),
+                      thumbColor: KthumbColor,
+                      overlayColor: Color(0x297312BD),
                       activeTrackColor: Colors.white,
                       thumbShape:
                           RoundSliderThumbShape(enabledThumbRadius: 15.0),

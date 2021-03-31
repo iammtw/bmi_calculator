@@ -41,9 +41,12 @@ class ResultsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    resultText.toUpperCase(),
-                    style: resultTextStyle,
+                  Padding(
+                    padding: const EdgeInsets.all(35.0),
+                    child: Text(
+                      resultText.toUpperCase(),
+                      style: resultTextStyle,
+                    ),
                   ),
                   Text(
                     bmiResult,
@@ -53,16 +56,33 @@ class ResultsPage extends StatelessWidget {
                     interpretation,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
-                  )
+                  ),
+                  SizedBox(
+                    height: 80,
+                  ),
+                  BottomButton(
+                    label: "RE-CALCULATE",
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                  ),
                 ],
               ),
             ),
           ),
-          BottomButton(
-            label: "RE-CALCULATE",
-            onTap: () {
-              Navigator.pop(context);
-            },
+          SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 16.0),
+              child: Text(
+                'Made with ❤ by MtwAbbaxi',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
           ),
         ],
       ),
